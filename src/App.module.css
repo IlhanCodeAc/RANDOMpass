@@ -1,0 +1,73 @@
+.Container {
+  margin: 0 auto;
+  height: 400px;
+  width: 300px;
+  padding: 30px;
+  background-color: rgb(81, 81, 230);
+  margin-top: 100px;
+}
+.Container p {
+  color: white;
+  font-size: 20px;
+}
+.Container .Input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.Container .Input input {
+  padding: 8px;
+  width: 100%;
+}
+.Container img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+}
+.Container .Length {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 50px;
+}
+.Container .Length input {
+  width: 50px;
+}
+.Container .uppercase {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 20px;
+}
+.Container .uppercase input {
+  width: 50px;
+}
+.Container .lowercase {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 20px;
+}
+.Container .lowercase input {
+  width: 50px;
+}
+.Container .numbers {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 20px;
+}
+.Container .numbers input {
+  width: 50px;
+}
+.Container .symbols {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 20px;
+}
+.Container .symbols input {
+  width: 50px;
+}
+.Container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+}/*# sourceMappingURL=App.module.css.map */
