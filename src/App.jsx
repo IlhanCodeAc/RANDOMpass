@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './App.module.scss';
+import Swal from 'sweetalert2';
 
 const App = () => {
   const [password, setPassword] = useState('');
@@ -38,13 +39,40 @@ const App = () => {
 
     setPassword(generatedPassword);
   };
+ const  copyClick = async ()=> {
+          await window.navigator.clipboard.writeText(password);
+  }
 
   return (
     <>
       <div className={styles.Container}>
         <div className={styles.Input}>
           <input type="text" value={password} readOnly />
-          <img src="src/assets/copy-solid.svg" alt="copy" />
+          <img 
+  onClick={() => { 
+    if(password) {
+      copyClick().then
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Your password has been copied to your clipboard",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+    else{
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "You cant copy the void",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+  }}
+  src="src/assets/copy-solid.svg" 
+  alt="copy" 
+/>
         </div>
         <div className={styles.Length}>
           <p>Password Length</p>
